@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:backgroundTint="@color/black"
+    android:elevation="8dp"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="ITEM NAME"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/artist_name"
+            android:text="@string/artist_name"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/collection_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="@string/collection_name"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/track_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="@string/track_price"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/artworkURL160"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_background"
+            android:contentDescription="@string/song_image"
+            />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MusicAPP</string>
+    <string name="title_activity_music_navigation">Music_navigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_pop">Pop</string>
+    <string name="title_rock">Rock</string>
+    <string name="title_classic">Classic</string>
+    <string name="song_image">song image</string>
+    <string name="track_price">TRACK PRICE</string>
+    <string name="collection_name">COLLECTION NAME</string>
+    <string name="artist_name">ARTIST NAME</string>
+</resources>

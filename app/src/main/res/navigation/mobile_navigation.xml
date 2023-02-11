@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/pop">
+
+    <fragment
+        android:id="@+id/pop"
+        android:name="com.example.musicapp.View.popCatView.PopCatFragment"
+        android:label="@string/title_pop"
+        tools:layout="@layout/main_fragment" />
+
+    <fragment
+        android:id="@+id/rock"
+        android:name="com.example.musicapp.View.rockCatView.RockCatFragment"
+        android:label="@string/title_rock"
+        tools:layout="@layout/main_fragment" />
+
+    <fragment
+        android:id="@+id/classic"
+        android:name="com.example.musicapp.View.classicCatView.ClassicCatFragment"
+        android:label="@string/title_classic"
+        tools:layout="@layout/main_fragment" />
+</navigation>
