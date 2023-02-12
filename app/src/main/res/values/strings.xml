@@ -11,4 +11,5 @@
     <string name="track_price">TRACK PRICE</string>
     <string name="collection_name">COLLECTION NAME</string>
     <string name="artist_name">ARTIST NAME</string>
+    <string name="item_name">ITEM NAME</string>
 </resources>

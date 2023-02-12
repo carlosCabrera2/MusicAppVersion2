@@ -83,10 +83,24 @@ dependencies {
     // google assertion truth
     implementation 'androidx.test.ext:truth:1.5.0'
 
-    // exoplayer
-    implementation 'androidx.media3:media3-exoplayer:1.0.0-beta03'
-    implementation 'androidx.media3:media3-ui:1.0.0-beta03'
-    implementation 'androidx.media3:media3-exoplayer-dash:1.0.0-beta03'
+     //exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.2'
+
+    // for core support in exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.2'
+
+    // for adding dash support in our exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.18.2'
+
+    // for adding hls support in exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.18.2'
+
+    // for smooth streaming of video in our exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.2'
+
+    // for generating default ui of exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.18.2'
+
 
     // glide
     implementation 'com.github.bumptech.glide:glide:4.14.2'

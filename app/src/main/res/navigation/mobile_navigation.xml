@@ -9,17 +9,37 @@
         android:id="@+id/pop"
         android:name="com.example.musicapp.View.popCatView.PopCatFragment"
         android:label="@string/title_pop"
-        tools:layout="@layout/main_fragment" />
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_pop_to_exo_player"
+            app:destination="@id/exo_player" />
+    </fragment>
 
     <fragment
         android:id="@+id/rock"
         android:name="com.example.musicapp.View.rockCatView.RockCatFragment"
         android:label="@string/title_rock"
-        tools:layout="@layout/main_fragment" />
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_rock_to_exo_player"
+            app:destination="@id/exo_player" />
+    </fragment>
 
     <fragment
         android:id="@+id/classic"
         android:name="com.example.musicapp.View.classicCatView.ClassicCatFragment"
         android:label="@string/title_classic"
-        tools:layout="@layout/main_fragment" />
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_classic_to_exo_player"
+            app:destination="@id/exo_player" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/exo_player"
+        android:name="com.example.musicapp.Utilities.ExoPlayerFragment"
+        android:label="exo_player"
+        tools:layout="@layout/exoplayer_fragment"/>
+
+
 </navigation>

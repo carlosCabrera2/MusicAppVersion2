@@ -35,6 +35,7 @@ class MusicViewModel (
 
      }
 
+    lateinit var musicTrack: String
 
 
     private fun getSong() {
@@ -56,6 +57,8 @@ class MusicViewModel (
 
     }
 
-
+    fun setTrack(musicTrack: String){
+            this.musicTrack = musicTrack
+    }
 
 }

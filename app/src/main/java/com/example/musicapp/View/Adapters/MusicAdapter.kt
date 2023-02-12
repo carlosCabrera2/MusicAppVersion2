@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.musicapp.R
 import com.example.musicapp.databinding.MusicItemBinding
 import com.example.musicapp.model.Results
 
@@ -46,11 +48,15 @@ class MusicViewHolder(
         binding.itemName.text = item.trackName?: "No Track Provided"
         binding.artistName.text = item.artistName?: "No Name Provided"
         binding.collectionName.text = item.collectionName?: "No Collection Provided"
-        binding.trackPrice.text = item.trackPrice.toString()
-        
+        binding.trackPrice.text =  item.trackPrice.toString()
 
-
-
+        Glide
+            .with(binding.root)
+            .load(item.artworkUrl60)
+            .centerCrop()
+            .placeholder(R.drawable.ic_dashboard_black_24dp)
+            .error(R.drawable.ic_notifications_black_24dp)
+            .into(binding.imgId)
 
         itemView.setOnClickListener {
             item.previewUrl?.let(onItemClick)

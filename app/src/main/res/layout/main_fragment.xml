@@ -7,13 +7,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".View.classicCatView.ClassicCatFragment">
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/musicRv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"/>
-
+        android:layout_marginBottom="20dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

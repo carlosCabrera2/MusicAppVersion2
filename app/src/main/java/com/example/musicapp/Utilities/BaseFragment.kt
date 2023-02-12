@@ -38,4 +38,6 @@ open class BaseFragment : Fragment() {
             .show()
     }
 
+
+
 }
