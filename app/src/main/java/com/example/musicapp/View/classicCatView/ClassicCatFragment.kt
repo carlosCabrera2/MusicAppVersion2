@@ -14,16 +14,19 @@ import com.example.musicapp.databinding.MainFragmentBinding
 import com.example.musicapp.model.MusicResponse
 
 class ClassicCatFragment: BaseFragment() {
+
     private val binding by lazy {
         MainFragmentBinding.inflate(layoutInflater)
     }
 
     private val musicAdapter by lazy {
         MusicAdapter {
-            musicViewModel.setTrack("https://music.apple.com/us/album/dont-stop-believin/169003304?i=169003415&uo=4")
+            musicViewModel.musicTrack = it
             findNavController().navigate(R.id.action_classic_to_exo_player)
         }
     }
+
+    private fun setTrack(){}
 
 
     override fun onCreateView(
@@ -33,7 +36,8 @@ class ClassicCatFragment: BaseFragment() {
         // Inflate the layout for this fragment
 
         binding.musicRv.apply {
-            layoutManager  = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            layoutManager  = LinearLayoutManager(requireContext(),
+                        LinearLayoutManager.VERTICAL, false)
             setHasFixedSize(true)
             adapter = musicAdapter
         }
@@ -54,4 +58,5 @@ class ClassicCatFragment: BaseFragment() {
 
         return binding.root
     }
+
 }

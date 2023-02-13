@@ -10,10 +10,15 @@ import com.example.musicapp.R
 import com.example.musicapp.Utilities.BaseFragment
 import com.example.musicapp.Utilities.UIState
 import com.example.musicapp.View.Adapters.MusicAdapter
+import com.example.musicapp.databinding.ExoplayerFragmentBinding
 import com.example.musicapp.databinding.MainFragmentBinding
 import com.example.musicapp.model.MusicResponse
+import com.google.android.exoplayer2.ExoPlayer
+import com.google.android.exoplayer2.MediaItem
 
 class PopCatFragment : BaseFragment() {
+
+   // private var player: ExoPlayer?= null
 
     private val binding by lazy {
         MainFragmentBinding.inflate(layoutInflater)
@@ -21,10 +26,12 @@ class PopCatFragment : BaseFragment() {
 
     private val musicAdapter by lazy {
         MusicAdapter {
-            musicViewModel.setTrack("https://music.apple.com/us/album/dont-stop-believin/169003304?i=169003415&uo=4")
+            musicViewModel.musicTrack = it
             findNavController().navigate(R.id.action_pop_to_exo_player)
         }
     }
+
+    private fun setTrack(){}
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,4 +62,7 @@ class PopCatFragment : BaseFragment() {
 
         return binding.root
     }
+
+
+
 }

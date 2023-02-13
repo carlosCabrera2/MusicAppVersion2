@@ -18,7 +18,7 @@ class MusicViewModel (
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
  ): ViewModel(){
 
-    lateinit var musicTrack: String
+     var musicTrack = ""
 
     private val songs = SongEnum.values()
     private val _classicCat: MutableLiveData<UIState<MusicResponse>> = MutableLiveData(UIState.LOADING)
@@ -55,8 +55,6 @@ class MusicViewModel (
 
     }
 
-    fun setTrack(musicTrack: String){
-            this.musicTrack = musicTrack
-    }
+
 
 }

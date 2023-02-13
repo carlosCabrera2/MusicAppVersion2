@@ -31,7 +31,7 @@ class ExoPlayerFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-
+            
         }
     }
 
@@ -63,6 +63,8 @@ class ExoPlayerFragment : Fragment() {
         }
 
     }
+
+
 
     //Stop exoplayer buffering
     private fun releaseExoPlayer() {

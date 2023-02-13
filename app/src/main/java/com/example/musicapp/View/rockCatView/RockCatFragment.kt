@@ -15,15 +15,19 @@ import com.example.musicapp.model.MusicResponse
 
 
 class RockCatFragment: BaseFragment() {
+
     private val binding by lazy {
         MainFragmentBinding.inflate(layoutInflater)
     }
+
     private val musicAdapter by lazy {
         MusicAdapter {
-            musicViewModel.setTrack("https://music.apple.com/us/album/dont-stop-believin/169003304?i=169003415&uo=4")
+            musicViewModel.musicTrack = it
             findNavController().navigate(R.id.action_rock_to_exo_player)
         }
     }
+
+    private fun setTrack(){}
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +36,8 @@ class RockCatFragment: BaseFragment() {
         // Inflate the layout for this fragment
         binding.musicRv.apply {
             layoutManager =
-                LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+                LinearLayoutManager(requireContext(),
+                    LinearLayoutManager.VERTICAL, false)
             setHasFixedSize(true)
             adapter = musicAdapter
         }
@@ -53,4 +58,5 @@ class RockCatFragment: BaseFragment() {
 
         return binding.root
     }
+
 }
