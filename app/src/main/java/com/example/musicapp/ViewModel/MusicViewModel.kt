@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.musicapp.Rest.MusicRepository
+
 import com.example.musicapp.Rest.MusicRepositoryImplementation
 import com.example.musicapp.Utilities.UIState
 import com.example.musicapp.model.MusicResponse
@@ -18,6 +18,7 @@ class MusicViewModel (
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
  ): ViewModel(){
 
+    lateinit var musicTrack: String
 
     private val songs = SongEnum.values()
     private val _classicCat: MutableLiveData<UIState<MusicResponse>> = MutableLiveData(UIState.LOADING)
@@ -32,17 +33,14 @@ class MusicViewModel (
 
      init {
          getSong()
-
      }
-
-    lateinit var musicTrack: String
 
 
     private fun getSong() {
         songs.forEach { g ->
             run {
                 viewModelScope.launch(ioDispatcher) {
-                    musicRepository.getListByType(g).collect() {
+                    musicRepository.getListByType(g).collect{
                         when (g) {
                             SongEnum.CLASSIC -> _classicCat.postValue(it)
                             SongEnum.POP -> _popCat.postValue(it)

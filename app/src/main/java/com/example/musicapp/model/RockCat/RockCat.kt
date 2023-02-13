@@ -2,7 +2,7 @@ package com.example.musicapp.model.RockCat
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.musicapp.model.ClassicCat.maptoClassicCat
+
 import com.example.musicapp.model.Results
 
 @Entity

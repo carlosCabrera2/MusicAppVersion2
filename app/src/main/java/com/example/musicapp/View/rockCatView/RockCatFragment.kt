@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.musicapp.R
 import com.example.musicapp.Utilities.BaseFragment
 import com.example.musicapp.Utilities.UIState
 import com.example.musicapp.View.Adapters.MusicAdapter
@@ -18,7 +20,8 @@ class RockCatFragment: BaseFragment() {
     }
     private val musicAdapter by lazy {
         MusicAdapter {
-            // todo handle the click to move to the details
+            musicViewModel.setTrack("https://music.apple.com/us/album/dont-stop-believin/169003304?i=169003415&uo=4")
+            findNavController().navigate(R.id.action_rock_to_exo_player)
         }
     }
 
@@ -27,7 +30,6 @@ class RockCatFragment: BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
         binding.musicRv.apply {
             layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
