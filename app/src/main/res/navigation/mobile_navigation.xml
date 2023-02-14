@@ -41,7 +41,17 @@
         android:id="@+id/exo_player"
         android:name="com.example.musicapp.Utilities.ExoPlayerFragment"
         android:label="exo_player"
-        tools:layout="@layout/exoplayer_fragment"/>
+        tools:layout="@layout/exoplayer_fragment">
+        <action
+            android:id="@+id/action_exo_player_to_pop"
+            app:destination="@id/pop" />
+        <action
+            android:id="@+id/action_exo_player_to_rock"
+            app:destination="@id/rock" />
+        <action
+            android:id="@+id/action_exo_player_to_classic"
+            app:destination="@id/classic" />
+    </fragment>
 
 
 </navigation>
